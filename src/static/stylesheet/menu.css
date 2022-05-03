@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+
+/*webkit scrollbar*/
+.history-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+.history-container::-webkit-scrollbar-track {
+    background: linear-gradient(45deg, darkslategray, gray);
+    cursor: pointer !important;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Handle */
+.history-container::-webkit-scrollbar-thumb {
+    background: #282828; 
+    border-radius: 0px;
+    transition: width 0.3s ease-in-out;
+    cursor: pointer !important;
+}
+
+/* Handle inactive */
+.history-container::-webkit-scrollbar-thumb:window-inactive {
+    background-color: #282828 !important;
+}
+
+
+.menu-offcanvas {
+	z-index: 10000;
+	position: fixed;
+	top: 0;
+	height: 100vw;
+	max-height: 100vw;
+	width: 400px;
+	background-color: #0a0a0acc;
+	overflow-y: auto;
+	transition-property: left;
+	transition-duration: 0.6s;
+}
+
+.close-btn {
+	text-align: right;
+	margin: 10px;
+}
+
+.close-btn .btn {
+	color: white;
+}
+
+.history-box {
+	margin-top: 10px;
+	text-align: center;
+	padding: 10px;
+	
+}
+
+.product-heading {
+	font-family: 'C Font6';
+	text-align: center;
+}
+
+.history-container {
+	height: 250px;
+	overflow-y: auto;
+	margin: 20px;
+	padding-top: 100px;
+	padding-bottom: 50px;
+	scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	background: linear-gradient(45deg, black, darkslategray, gray);
+	transition-property: height, padding;
+	transition-duration: 0.6s;
+}
+
+.history-el {
+	text-transform: capitalize;
+	margin-bottom: 60px;
+	width: 90%;
+	transition-duration: 0.3s;
+	transition-property: font-size;
+}
+
+.highlight {
+	font-size: 1.6rem;
+	font-family: 'C Font6';
+	outline: 2px solid #ddddddcc;
+}
+
+footer {
+	height: 400px;
+	width: 100%;
+	background: linear-gradient(180deg, #0a0c18, black 50%);
+
+}
+
+footer .date, footer .time, footer .info {
+	font-family: 'Share Tech Mono', monospace;
+	text-shadow: 0 0 20px #a28bff, 0 0 20px rgb(10 175 230 / 0%);
+	text-align: center;
+}
+
+footer .date {
+	font-size: 1.3rem;
+	letter-spacing: 0.1rem;
+}
+
+footer .time {
+	font-size: 4.5rem;
+	letter-spacing: 0.05rem;
+	margin-bottom: -14px;
+}
+
+footer .info span {
+	font-family: 'Dancing Script';
+	font-size: 2.8rem;
+	vertical-align: middle;
+	margin: 0px 4px 0px 0px;
+}
+
+.footer-links {
+	height: 210px;
+}

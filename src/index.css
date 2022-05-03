@@ -1,13 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto+Mono:wght@100;200;300;400;500&family=Roboto:wght@100;300;400;500&family=B612&&family=Oswald&family=Abril+Fatface&family=Anton&family=KoHo&family=Monoton&family=Limelight&family=Jost:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Francois+One&family=Poppins:wght@200;300;400&family=Dancing+Script&display=swap');
+
+:root {
+    --deep-blue: #0a0c18;
+}
+
+::selection {
+    background-color: #2000a2;
+    color: white !important;
+}
+
+
+/*webkit scrollbar*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #0a0a14;
+    cursor: pointer !important;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #fbff00e6; 
+    /*border-radius: 16px;*/
+    transition: width 0.3s ease-in-out;
+    cursor: pointer !important;
+}
+
+/* Handle inactive */
+::-webkit-scrollbar-thumb:window-inactive {
+    background-color: rgba(32, 0, 162, 0.4) !important;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a.link-alike {text-decoration: none;}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Poppins', sans-serif;
+    color:  white;
+    background-color: var(--deep-blue);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+
+header {
+    padding: 30px 20px;
+}
+
+
+div.nav-logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.nav-link {
+    padding: 6px 2px;
+    color: #beaeff; /*#fee6ce  #a28bff*/
+    height: 45px;
+    width: 160px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: 'LimeLight', cursive;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    border-radius: 0px !important;
+    transition: text-decoration-color 0.4s ease-in-out, 
+                text-shadow 0.4s ease-in-out, 
+                transform 0.4s ease-in-out, 
+                color 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+div.nav-link:hover {
+    color: #fbff00 !important;
+    text-decoration-color: #fbff00;
+    text-shadow: 3px 2px 2px #2000a2;
+    transform: translate(-2px, -2px);
+}
+
+
+div.page-logo a.logo-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    height: 57px;
+    width: 205px;
+    box-shadow: 10px 10px 12px 1px #0a0a0a;
+}
+
+form.form {
+    margin: 70px auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 900px;
+}
+
+form.form input.form-control {
+    border-radius: 0px;
+    border: none;
+    background-color: #282828;
+    color: white;
+    transition: background-color .45s ease-in-out;
+}
+
+form.form button.btn {
+    border: none;
+    padding: 0px 10px;
+    color: white;
+    background-color: #282828;
+    font-size: 1.3rem;
+    border-radius: 0px 3px 3px 0px;
+}
+
+form.form button.btn:hover {
+    background-color: #000000;
+    color: white;
+}
+
+form.form input.form-control:focus, form.form button.btn:focus {
+    box-shadow: 0 0 0 0 transparent;
+} 
+
+
+main div.query-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+div.qcard-container {
+    margin: 36px;
+    border-radius: 1.5px;
+    transition: box-shadow 0.5s ease-in-out, 
+                transform 0.5s ease-in-out, 
+                background-color 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+div.qcard-container:hover {
+    box-shadow: rgba(40, 40, 40, 0.4) 5px 5px, 
+        rgba(40, 40, 40, 0.3) 10px 10px, 
+        rgba(40, 40, 40, 0.2) 15px 15px, 
+        rgba(40, 40, 40, 0.1) 20px 20px, 
+        rgba(40, 40, 40, 0.05) 25px 25px;
+    transform: translate(-2px, -2px);
+    background-color: #0a0a14;
+}
+
+div.qcard-container:hover div.qcard-image-container {
+    box-shadow: inset 0px -20px 95px 11px black, 
+                0px 0px 100px 10px black;
+    transition: box-shadow 1.35s ease-in-out;
+}
+
+div.qcard-container:hover div.q-card-img-container{
+    /*background-size: 115% !important;*/
+    transform: scale(1.18);
+    opacity: 0.7;
+    filter: blur(1.45px);
+    transition: transform 5s ease-in-out, 
+                opacity 5s ease-in-out,
+                filter 3.2s cubic-bezier(0.61, 0, 1, 0.43);
+}
+
+div.qcard-container:hover div.qcard-title {
+    transform: translateX(0px);
+    text-decoration-color: #ffffff;
+    transition: transform 1.4s ease-in-out 0.6s, 
+                text-decoration-color 0.4s ease-in-out 1.6s;
+}
+
+div.qcard-box {
+    height: 300px;
+    width: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+div.qcard-image-container {
+    width: 200px;
+    height: 300px;
+    border-radius: 1.5px;
+    position: absolute;
+    overflow: hidden;
+/*    background-position: center top !important;
+    background-repeat: no-repeat;
+    background-size: 100% !important;*/
+    transition: box-shadow 1.7s ease-in-out;
+}
+
+div.q-card-img-container {
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    width: 100%;
+    height: 100%;
+    filter: blur(0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    transition: transform 1.7s ease-in-out, 
+                opacity 1.7s ease-in-out,
+                filter 1.65s ease-in-out;
+}
+
+/*img.qcard-image {
+    width: 100%;
+}*/
+
+div.qcard-title {
+    font-size: 1.775rem;
+    font-family: 'Francois One';
+    font-style: italic;
+    /*font-weight: bold;*/
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 3px;
+    padding: 4px 9px;
+    margin: 3px;
+    max-width: 200px;
+    width: fit-content;
+    color: #ffffff;
+    transform: translateX(-200px);
+    transition: transform 0.54s ease-in-out, 
+                text-decoration-color 0.35s ease-in-out;
+}
+
+div.next-page-card {
+    font-size: 1.6rem;
+    margin: 36px;
+    border-radius: 1.5px;
+    height: 300px;
+    width: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(40, 40, 40, 0%);
+}
+
+div.next-page-card div.nextpage-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    flex-grow: 1;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    cursor: pointer;
+    transition: text-decoration-color 0.15s ease-in-out;
+}
+
+div.next-page-card div.nextpage-link:hover {
+    text-decoration-color: white;
+}
+
+div.next-page-card div.nextpage-link:hover div {
+    margin-left: 12px;
+}
+
+div.next-page-card div.nextpage-link > div {
+    height: 30px;
+    margin-left: 10px;
+    padding-bottom: 40px;
+    transition: margin-left 0.15s ease-in-out;
+}
+
+div.next-page-card div.nextpage-link svg {
+    height:  30px;
+    fill: white;
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+    div.nav-logo {
+        justify-content: space-around;
+    }
+
+    div.nav-link {
+        width: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    div.nav-link:hover {
+        transform: translate(0px);
+    }
+
+    span.nav-link-text {
+        display: none;
+    }
+
+    .nav-link-icon {
+        display: block !important;
+        color: #beaeff !important;
+        font-size: 2rem;
+        transition: color 0.35s ease; 
+    }
+
+    .nav-link-icon:hover {
+        color: #fbff00 !important;
+    }
+
+    .nav-link-icon svg {font-size: 2rem;}
+}
+
+@media only screen and (min-width: 700px) {
+    .nav-link-icon {
+        display: none !important;    
+    }
+    
+}
+
+@media only screen and (max-width: 822px) {
+    div.next-page-card {
+        display: none;
+    }
 }
