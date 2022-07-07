@@ -60,6 +60,11 @@ header {
 }
 
 
+/*#main {
+    flex-grow: 1;
+}
+*/
+
 div.nav-logo {
     display: flex;
     justify-content: space-evenly;
